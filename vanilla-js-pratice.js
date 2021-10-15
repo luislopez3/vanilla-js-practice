@@ -242,11 +242,46 @@ function close10(a, b) {
 }
 
 close10(13, 7);
-*/
 
-// Given 2 int values, return true if they are both in the range 30..40 inclusive, 
+// Given 2 int values, return true if they are both in the range 30..40 inclusive,
 // or they are both in the range 40..50 inclusive.
 
 function in3050(a, b) {
-    
+  if (a >= 30 && a <= 40 && b >= 30 && b <= 40) {
+    console.log(true);
+    return true;
+  }
+  if (a >= 40 && a <= 50 && b >= 40 && b <= 50) {
+    console.log(true);
+    return true;
+  } else {
+    console.log(false);
+    return false;
+  }
 }
+
+in3050(40, 51);
+*/
+
+// Given 2 positive int values, return the larger value that is in the range
+// 10..20 inclusive, or return 0 if neither is in that range.
+
+function max1020(a, b) {
+  if (b > a) {
+    const temp = a;
+    a = b;
+    b = temp;
+  }
+  if (a >= 10 && a <= 20) {
+    console.log(a);
+    return a;
+  }
+  if (b >= 10 && b <= 20) {
+    console.log(b);
+    return b;
+  } else {
+    return 0;
+  }
+}
+
+max1020(10, 21);
