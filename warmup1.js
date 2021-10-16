@@ -261,7 +261,6 @@ function in3050(a, b) {
 }
 
 in3050(40, 51);
-*/
 
 // Given 2 positive int values, return the larger value that is in the range
 // 10..20 inclusive, or return 0 if neither is in that range.
@@ -285,3 +284,63 @@ function max1020(a, b) {
 }
 
 max1020(10, 21);
+
+// Return true if the given string contains between 1 and 3 'e' chars.
+
+function stringE(str) {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str.charAt(i) === "e") {
+      count++;
+    }
+  }
+  console.log(count >= 1 && count <= 3);
+  return count >= 1 && count <= 3;
+}
+
+stringE("Heeeello");
+
+// Given two non-negative int values, return true if they have the same last
+// digit, such as with 27 and 57. Note that the % 'mod' operator computes
+// remainders, so 17 % 10 is 7.
+
+function lastDigit(a, b, c) {
+  console.log(a % 10 === b % 10);
+  return a % 10 === b % 10;
+}
+
+lastDigit(6, 17)
+
+// Given a string, return a new string where the last 3 chars are now in upper
+// case. If the string has less than 3 chars, uppercase whatever is there.
+// Note that str.toUpperCase() returns the uppercase version of a string.
+
+function endUp(str) {
+  if (str.length <= 3) {
+    console.log(str.toUpperCase());
+    return str.toUpperCase();
+  }
+  let cut = str.length - 3;
+  let front = str.substring(0, cut);
+  let back = str.substring(cut);
+  console.log(front + back.toUpperCase());
+  return front + back.toUpperCase();
+}
+
+endUp("Hello");
+*/
+
+// Given a non-empty string and an int N, return the string made starting with
+// char 0, and then every Nth char of the string. So if N is 3, use char 0, 3, 6,
+// ... and so on. N is 1 or more.
+
+function everyNth(str, n) {
+  let result = "";
+  for (let i = 0; i < str.length; i += n) {
+    result += str.charAt(i);
+  }
+  console.log(result);
+  return result;
+}
+
+everyNth("Miracle", 2);
