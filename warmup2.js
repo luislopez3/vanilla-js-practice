@@ -87,7 +87,7 @@ function stringSplosion(str){
 }
 
 stringSplosion("Code");
-*/
+
 
 // Given a string, return the count of the number of times that a substring
 // length 2 appears in the string and also as the last 2 chars of the string, so
@@ -111,3 +111,48 @@ function last2(str) {
 
 last2("hixxhi");
 
+// Given an array of ints, return the number of 9's in the array.
+
+function arrayCount9(nums) {
+  let count = 0;
+  return nums.filter(num => num === 9 ? console.log(count += 1) : console.log(count));
+}
+
+arrayCount9([1, 2, 3]);
+
+// Given an array of ints, return true if one of the first 4 elements in the array is a 9.
+// The array length may be less than 4.
+
+function arrayFront9(nums) {
+  let end = nums.length;
+  if (end > 4) {
+    end = 4;
+  }
+  for (let i = 0; i < end; i++) {
+    if (nums[i] === 9) {
+      console.log(true);
+      return true;
+    }
+  }
+  console.log(false);
+  return false;
+}
+
+arrayFront9([1, 2, 3, 4, 9]);
+*/
+
+// Given an array of ints, return true if the sequence of numbers 1, 2, 3
+// appears in the array somewhere.
+
+function array123(nums) {
+  for (let i = 0; i < nums.length - 2; i++) {
+    if (nums[i] === 1 && nums[i + 1] === 2 && nums[i + 2] === 3) {
+      console.log(true);
+      return true;
+    }
+  }
+  console.log(false);
+  return false;
+}
+
+array123([5, 4, 3, 1, 2, 2]);
