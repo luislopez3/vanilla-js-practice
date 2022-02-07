@@ -269,7 +269,6 @@ function noTriples(nums) {
 }
 
 noTriples([1, 1, 2, 2, 1]);
-*/
 
 // Given an array of ints, return true if it contains a 2, 7, 1 pattern -- a value, 
 // followed by the value plus 5, followed by the value minus 1. 
@@ -278,7 +277,7 @@ noTriples([1, 1, 2, 2, 1]);
 
 function has271(nums) {
   for (let i = 0; i < nums.length - 2; i++) {
-    const first = nums[i];
+    var first = nums[i];
     if (nums[i + 1] === (first + 5) && Math.abs(nums[i + 2] - (first - 1)) <= 2) {
       console.log(true);
       return true;
@@ -288,4 +287,13 @@ function has271(nums) {
   return false;
 }
 
-has271([1, 2, 8, 1]);
+has271([3, 8, 2]);
+*/
+
+function alsoHas271(nums) {
+  for (let i = 0; i < nums.length; i++) {
+    console.log(nums[i][0] == 2 || nums[i][1] == 7 || nums[i][2] == 1);
+  }
+}
+
+alsoHas271([2, 7, 1]);
